@@ -4,16 +4,20 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  Link as ChakraLink
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import NextImage from "next/image";
 
 import { seo, data } from "config";
 
+const Projects = [
+  { title: "Area-27", path: "/area27", color: "linear(to-l, #92c6f0, #3291df)", hover: "#3291df" },
+  { title: "Area-47", path: "/area47", color: "linear(to-l, #bc55cf, #b000cf)", hover: "#b000cf"}
+]
+
 const Home = () => {
   const color = useColorModeValue("telegram.500", "telegram.400");
-
-  const isOdd = (num) => num % 2;
 
   const title = "Home";
   const description = seo.description;
@@ -37,98 +41,32 @@ const Home = () => {
           ],
         }}
       />
-
-      <Box
-        as="section"
-        d="flex"
-        alignItems="center"
-        flexDir="column"
-        textAlign="center"
-        py="4"
-      >
-        <NextImage
-          src="/bighead.svg"
-          width="350"
-          height="350"
-          alt="avatar bigheads"
-          placeholder="blur"
-          blurDataURL="L5I~of#i004mgjw]-4XA00?wL#xu"
-          priority
-        />
-        <Box>
-          <Heading as="h1" fontSize="2xl" fontWeight="500" py="2">
-            Hi, I'm John Doe{" "}
-            <span role="img" aria-label="hand">
-              👋🏻
-            </span>
-          </Heading>
-          <Heading fontSize={["3xl", "4xl"]} fontWeight="700">
-            <Text as="span" color={color}>
-              Building
-            </Text>{" "}
-            digital products, Brands, And experience.
-          </Heading>
-          <Text py="4">
-            A{" "}
-            <Text as="span" fontWeight="600">
-              web designer
-            </Text>{" "}
-            and{" "}
-            <Text as="span" fontWeight="600">
-              front-end web developer
-            </Text>{" "}
-            based in the US, I specialize in UI/UX design, Responsive web
-            design, And accessibility.
-          </Text>
-          <Button
-            colorScheme="telegram"
-            variant="ghost"
-            size="lg"
-            fontSize="20px"
-          >
-            Get in touch
-          </Button>
-        </Box>
+      
+      <Box display="flex" justifyContent="center" marginTop="30px">
+        <NextImage src="/scpflogo.png" height="200" width="200"/>
       </Box>
 
-      <Box
-        as="section"
-        d="flex"
-        alignItems="center"
-        flexDir="column"
-        textAlign={{ base: "center", lg: "left" }}
-        py="4"
-      >
-        {data.map((item, index) => (
-          <Box
-            d={{ lg: "flex" }}
-            justifyContent={{ lg: "center" }}
-            alignItems={{ lg: "center" }}
-            flexDir={{ lg: isOdd(index) == 1 && "row-reverse" }}
-            key={index}
-          >
-            <Box
-              w={{ base: "80%", lg: "35%" }}
-              mx={{ base: "auto", lg: "0" }}
-              pl={{ lg: isOdd(index) == 1 && "10" }}
-              pr={{ lg: isOdd(index) == 0 && "10" }}
-            >
-              <NextImage
-                src={item.image}
-                width="500"
-                height="500"
-                alt={item.title}
-                placeholder="blur"
-                blurDataURL="L8LE.{~60000_3V@ITx^00t:V?-P"
-              />
-            </Box>
+      <Box display="flex" justifyContent="center" textAlign="center" flexDir="column">
+        <Heading fontWeight="700">
+          <Text as="span" color={color}>SCPF</Text>{" "}
+          Hub
+        </Heading>
+        <Heading fontSize="2xl" fontWeight="600">
+          Development Home for Bulk Games' SCPF</Heading>
+      </Box>
 
-            <Box w={{ lg: "50%" }}>
-              <Heading as="h1">{item.title}</Heading>
-              <Text py="4">{item.description}</Text>
-            </Box>
-          </Box>
+      <Heading textAlign="center" marginTop="20px">Choose a project</Heading>
+
+      <Box display="flex" justifyContent="center" textAlign="center" marginTop="20px" marginBottom="100px">
+
+        {Projects.map((item, index) => (
+          <ChakraLink href={item.path} _focus={{ outline: "none" }} key={index}>
+            <Button bgGradient={item.color} mx="2" _hover={{ bg: `${item.hover}` }}>
+              {item.title}
+            </Button>
+          </ChakraLink>
         ))}
+
       </Box>
     </>
   );

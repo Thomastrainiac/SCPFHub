@@ -1,13 +1,15 @@
 import { Box, Button, Icon, Link as ChakraLink, Text } from "@chakra-ui/react";
-import { FaGithub, FaLinkedin, FaInstagram, FaCode } from "react-icons/fa";
+import { Image } from "next/image"
+import { FaTwitter, FaDiscord } from "react-icons/fa";
+import { SiRoblox } from "react-icons/si";
 
 import { MAX_WIDTH } from "config";
 
 // Fell free to add your social media accounts!
 const socialAccounts = [
-  { icon: FaGithub, path: "https://github.com/", title: "Github" },
-  { icon: FaLinkedin, path: "https://www.linkedin.com/", title: "Linkedin" },
-  { icon: FaInstagram, path: "https://www.instagram.com/", title: "Instagram" },
+  { icon: FaTwitter, path: "https://Twitter.com/BulkGames", title: "Twitter" },
+  { icon: FaDiscord, path: "https://discord.gg/scpf", title: "Discord" },
+  { icon: SiRoblox, path: "https://www.roblox.com/groups/2760782/Special-Containment-Procedures-Foundation-SCPF#!/about", title: "Roblox" }
 ];
 
 const Footer = () => {
@@ -46,46 +48,11 @@ const Footer = () => {
             <span role="img" aria-label="red heart">
               ❤️
             </span>
-            ,{" "}
-            <ChakraLink
-              href="https://nextjs.org/"
-              fontWeight="600"
-              _focus={{ outline: "none" }}
-              isExternal
-            >
-              Next.js
-            </ChakraLink>
-            ,{" "}
-            <ChakraLink
-              href="https://chakra-ui.com/"
-              fontWeight="600"
-              _focus={{ outline: "none" }}
-              isExternal
-            >
-              Chakra UI
-            </ChakraLink>
-            , Hosted in{" "}
-            <ChakraLink
-              href="http://vercel.com/"
-              fontWeight="600"
-              _focus={{ outline: "none" }}
-              isExternal
-            >
-              Vercel.
-            </ChakraLink>
           </Text>
         </Box>
-        <Box py="2">
-          <ChakraLink
-            href="https://github.com/imadatyatalah/nextjs-chakra-ui-portfolio-template"
-            aria-label="source code"
-            isExternal
-          >
-            <Button aria-label="source code">
-              <Icon as={FaCode} w="6" h="6" />
-            </Button>
-          </ChakraLink>
-        </Box>
+        <Text marginBottom={"20px"} fontWeight={"600"}>
+          Created by: Aaron Long
+        </Text>
       </Box>
     </Box>
   );
