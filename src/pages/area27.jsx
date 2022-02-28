@@ -9,7 +9,7 @@ import {
   import { NextSeo } from "next-seo";
   import { getAllFilesFrontMatter } from "@/lib/posts";
 
-  import { seo, data } from "config";
+  import { seo } from "config";
   
   const Area27 = ({ posts }) => {
 
@@ -35,10 +35,6 @@ import {
             ],
           }}
         />
-
-        {/* <Box borderRadius="10px" borderWidth="1px">
-          <Text>asd</Text>
-        </Box> */}
 
         {posts.map((value, _) => (
             <>

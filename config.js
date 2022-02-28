@@ -1,8 +1,8 @@
 export const seo = {
-  title: "Portfolio Boilerplate",
+  title: "SCPF Hub",
   description:
-    "A Next.js boilerplate for building your portfolio as quick as possible",
-  canonical: "https://portfolio-boilerplate-nextjs.vercel.app/",
+    "The home for Bulk Games' SCPF",
+  canonical: "https://scpfhub.vercel.app/",
 };
 
 export const data = [
