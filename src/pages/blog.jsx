@@ -18,6 +18,9 @@ const options = {
 };
 
 const Blog = ({ posts }) => {
+
+  console.log(posts)
+
   const router = useRouter();
 
   const fuse = new Fuse(posts, options);

@@ -61,7 +61,7 @@ const Home = () => {
 
         {Projects.map((item, index) => (
           <ChakraLink href={item.path} _focus={{ outline: "none" }} key={index}>
-            <Button bgGradient={item.color} mx="2" _hover={{ bg: `${item.hover}` }}>
+            <Button bgGradient={item.color} color="white" mx="2" _hover={{ bg: `${item.hover}` }}>
               {item.title}
             </Button>
           </ChakraLink>
