@@ -11,6 +11,17 @@ import {
 
   import { seo } from "config";
   
+
+  function bgColor(text) {
+    if (text === "Live") {
+      return("#08c738")
+    }else if (text === "Not Started") {
+      return("#ba2f3c")
+    }else if (text === "In Progress") {
+      return("#b7c92c")
+    }
+  }
+
   const Area27 = ({ posts }) => {
 
     const title = "Area-27";
@@ -55,11 +66,11 @@ import {
                     borderRadius="5px"
                     borderWidth="2px"
                     boxShadow="lg">
-                        <Box>
+                        <Box width="73%">
                           <Heading fontSize="2xl">{obj.name}</Heading>
                           <Text width="70%">{obj.description}</Text>
                         </Box>
-                        <Box bg="#08c738" borderRadius="10px" width="20%" height="10%" mb="40px" mt="40px">
+                        <Box bg={bgColor(obj.status)} borderRadius="10px" width="20%" height="10%" mb="40px" mt="40px">
                           <Text textAlign="center" pb="2px" pt="2px">{obj.status}</Text>
                         </Box>
                     </Box>
