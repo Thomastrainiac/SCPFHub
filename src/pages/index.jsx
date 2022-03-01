@@ -33,7 +33,7 @@ const Home = () => {
           description,
           images: [
             {
-              url: `${seo.canonical}bighead.svg`,
+              url: `${seo.canonical}safari-pinned-tab.svg`,
               width: "350px",
               height: "350px",
               alt: "avatar bigheads",

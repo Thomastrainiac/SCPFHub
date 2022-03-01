@@ -27,7 +27,7 @@ import {
             description,
             images: [
               {
-                url: `${seo.canonical}bighead.svg`,
+                url: `${seo.canonical}safari-pinned-tab.svg`,
                 width: "350px",
                 height: "350px",
                 alt: "avatar bigheads",
@@ -41,8 +41,10 @@ import {
                 <Heading marginTop="20px" fontSize="3xl" marginLeft="20px" key={value.title}>{value.title}</Heading>
                 {value.data.map((obj, _) => (
 
-                    <Box
+                    <Box 
                     key={obj.name}
+                    display="flex"
+                    flexDirection="row"
                     marginLeft="40px"
                     marginTop="20px"
                     marginBottom="20px"
@@ -53,10 +55,12 @@ import {
                     borderRadius="5px"
                     borderWidth="2px"
                     boxShadow="lg">
-                        <Heading fontSize="2xl">{obj.name}</Heading>
-                        <Text width="70%">{obj.description}</Text>
-                        <Box bg="#08c738">
-                            {obj.staus}
+                        <Box>
+                          <Heading fontSize="2xl">{obj.name}</Heading>
+                          <Text width="70%">{obj.description}</Text>
+                        </Box>
+                        <Box bg="#08c738" borderRadius="10px" width="20%" height="10%" mb="40px" mt="40px">
+                          <Text textAlign="center" pb="2px" pt="2px">{obj.status}</Text>
                         </Box>
                     </Box>
                 ))}
