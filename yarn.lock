@@ -1416,9 +1416,9 @@
   dependencies:
     "@chakra-ui/utils" "1.10.4"
 
-"@corex/deepmerge@^2.6.34":
+"@corex/deepmerge@^2.6.148":
   version "2.6.148"
-  resolved "https://registry.npmjs.org/@corex/deepmerge/-/deepmerge-2.6.148.tgz"
+  resolved "https://registry.yarnpkg.com/@corex/deepmerge/-/deepmerge-2.6.148.tgz#8fa825d53ffd1cbcafce1b6a830eefd3dcc09dd5"
 
 "@ctrl/tinycolor@^3.4.0":
   version "3.4.0"
@@ -2298,12 +2298,6 @@ markdown-escapes@^1.0.0:
   version "1.0.4"
   resolved "https://registry.npmjs.org/markdown-escapes/-/markdown-escapes-1.0.4.tgz"
 
-matcher@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/matcher/-/matcher-4.0.0.tgz"
-  dependencies:
-    escape-string-regexp "^4.0.0"
-
 mdast-squeeze-paragraphs@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/mdast-squeeze-paragraphs/-/mdast-squeeze-paragraphs-4.0.0.tgz"
@@ -2337,7 +2331,7 @@ mdurl@^1.0.0:
   version "1.0.1"
   resolved "https://registry.npmjs.org/mdurl/-/mdurl-1.0.1.tgz"
 
-minimist@^1.2.5:
+minimist@^1.2.5, minimist@^1.2.6:
   version "1.2.6"
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
 
@@ -2364,13 +2358,12 @@ next-seo@^5.4.0:
   version "5.4.0"
   resolved "https://registry.yarnpkg.com/next-seo/-/next-seo-5.4.0.tgz#37a7784b30b3f70cec3fa0d77f9dde5990822d24"
 
-next-sitemap@^1.6.203:
-  version "1.6.203"
-  resolved "https://registry.npmjs.org/next-sitemap/-/next-sitemap-1.6.203.tgz"
+next-sitemap@^2.5.20:
+  version "2.5.20"
+  resolved "https://registry.yarnpkg.com/next-sitemap/-/next-sitemap-2.5.20.tgz#7124e138506c2f10e460c3dc77907baf4d134478"
   dependencies:
-    "@corex/deepmerge" "^2.6.34"
-    matcher "^4.0.0"
-    minimist "^1.2.5"
+    "@corex/deepmerge" "^2.6.148"
+    minimist "^1.2.6"
 
 next@^12.1.0:
   version "12.1.0"
